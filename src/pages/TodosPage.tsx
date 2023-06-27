@@ -7,11 +7,6 @@ declare var confirm: (question: string) => boolean
 
 export const TodosPage: React.FC = () => {
     const [todos, setTodos] = useState<ITodo[]>(JSON.parse(localStorage.getItem('todos') || '[]') as ITodo[])
-  // useEffect(() => {
-  //   console.log(localStorage.getItem('todos'))
-  //   const saved = JSON.parse(localStorage.getItem('todos') || '[]') as ITodo[]
-  //   setTodos(saved)
-  // }, [])
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
   }, [todos])
@@ -21,7 +16,6 @@ export const TodosPage: React.FC = () => {
       id: Date.now(),
       completed: false
     }
-    // setTodos([newTodo, ...todos])
     setTodos(prev => [newTodo, ...prev])
   }
 
@@ -36,7 +30,7 @@ export const TodosPage: React.FC = () => {
   }
 
   const removeHandler = (id: number) => {
-    const shouldRemove = confirm ('Do you really want to remove this element?')
+    const shouldRemove = confirm ('Вы действительно хотите удалить эту запись?')
     if(shouldRemove) {
       setTodos(prev => prev.filter(todo => todo.id !== id))
     }

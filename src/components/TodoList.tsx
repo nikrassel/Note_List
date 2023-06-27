@@ -9,7 +9,7 @@ type TodoListProps = {
 
 export const TodoList: React.FC<TodoListProps> = ({ todos, onRemove, onToggle }) => {
     if (todos.length === 0) {
-        return <p className='center'>There are no chores now</p>
+        return <p className='center'>Пока нет записей</p>
     }
     const removeHandler = (event: React.MouseEvent, id: number) => {
         event.preventDefault()

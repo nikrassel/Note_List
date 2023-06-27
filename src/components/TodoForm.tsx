@@ -27,9 +27,9 @@ export const TodoForm: React.FC<TodoFormProps> = props => {
                 onKeyDown={keyPressHandler}
                 // value={title} 
                 id='title' 
-                placeholder='Input your chore'/>
+                placeholder='Введите текст'/>
             <label htmlFor="title" className='active'>
-                Input your chore
+                Запишите своё дело
             </label>
         </div>
     )

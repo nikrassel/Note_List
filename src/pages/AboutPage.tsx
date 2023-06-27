@@ -5,9 +5,9 @@ export const AboutPage: React.FC = () => {
     const navigate = useNavigate()
     return (
         <>
-            <h1>Info Page</h1>
+            <h1>Страница информации</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque illo perferendis voluptatem earum maiores ipsum suscipit, unde necessitatibus impedit itaque ducimus vel, sit eaque minima tempore. Quia ut delectus eius?</p>
-            <button className='btn' onClick={() => navigate('/')}>Back to the chores</button>
+            <button className='btn' onClick={() => navigate('/')}>Назад к списку дел</button>
         </>
     )
 }
